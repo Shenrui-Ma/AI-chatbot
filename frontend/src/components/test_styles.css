@@ -1,0 +1,9 @@
+.image-border {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* 设置圆角 */
+    border: 5px solid #225598; /* 设置边框宽度为5px，颜色为番茄红 */
+    display: block; /* 避免图片下方出现空隙 */
+    margin: 10px auto; /* 上下保持10px的间距，水平居中 */
+  }
