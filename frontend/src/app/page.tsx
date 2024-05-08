@@ -1,48 +1,20 @@
 import Card from "@/components/item-card";
 import Link from "next/link";
 import Image from "next/image";
+import Sidebar from "@/components/item-sidebar";
 
 export default function HomePage() {
   return (
-    <div className="flex relative">
+    <div className="flex">
+      {/* 侧边栏 */}
+      <div className="flexed">
+        <Sidebar />
+      </div>
       {/* 分享按钮 */}
-      <div className="absolute top-4 right-4">
+      <div className=" absolute top-4 right-4">
         <button className="bg-black text-white p-2 rounded-full hover:bg-green-700">
           分享
         </button>
-      </div>
-
-      {/* 侧边栏 */}
-      <div className="w-64 h-screen bg-gray-200 flex flex-col justify-between items-center py-10 border-4 border-gray-900">
-        <div>
-          <Link
-            href="/login"
-            className="bg-blue-300 text-black py-2 px-2 rounded-full hover:bg-blue-600 font-bold border-4 border-purple-900"
-            style={{ width: "60px", height: "60px" }} // 确保宽高相等
-          >
-            登录
-          </Link>
-
-          {/* 增加了 mt-10 来向下移动历史按钮
-          <Link
-            href="/history"
-            className="mt-10 bg-blue-300 text-black py-2 px-2 rounded-full hover:bg-blue-600 font-bold border-4 border-purple-900"
-            style={{ width: "60px", height: "60px" }} // 确保宽高相等
-          >
-            历史
-          </Link> */}
-        </div>
-
-        {/* Beta按钮 */}
-        <div>
-          <Link
-            href="/beta"
-            className="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-700 font-bold border-4 border-green-900"
-            style={{ width: "80px", height: "80px" }} // 确保宽高相等
-          >
-            Beta
-          </Link>
-        </div>
       </div>
 
       {/* 主内容区 */}

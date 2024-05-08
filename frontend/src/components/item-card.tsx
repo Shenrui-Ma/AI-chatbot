@@ -9,7 +9,7 @@ export default function ItemCard(props: {
   pageUrl: string;
 }) {
   return (
-    <div className="relative border-2 border-black shadow-md rounded-md w-[50%] h-[300px] p-4 overflow-visible min-w-[300px]">
+    <div className="relative border-2 border-black shadow-md rounded-md w-[300px] h-[275px] p-4 overflow-visible min-w-[300px]">
       <div className="flex justify-between items-center h-full">
         <Image
           src={props.imageUrl}

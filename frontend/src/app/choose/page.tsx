@@ -1,31 +1,37 @@
 "use client";
 import Card from "@/components/item-card";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Sidebar from "@/components/item-sidebar";
 
 const teachers = [
   {
     teacherName: "罗志勇教授",
     teacherMajor: "机器学习",
-    imageUrl: "/images/罗志勇2.png",
-    pageUrl: "http://localhost:3000/luoZhiYong",
+    description: "“我普通话不标准吗？”",
+    imageUrl: "/images/罗志勇.png",
+    pageUrl: "/luoZhiYong",
   },
   {
     teacherName: "于东教授",
     teacherMajor: "C++编程",
+    description: "“今天的教室稍显稀疏哇”",
     imageUrl: "/images/于东.jpg",
-    pageUrl: "http://localhost:3000/yuDong",
+    pageUrl: "/yuDong",
   },
   {
     teacherName: "刘鹏远教授",
     teacherMajor: "Python",
+    description: "“没交作业，该罚！上课缺勤，该罚！”",
     imageUrl: "/images/刘鹏远.png",
-    pageUrl: "http://localhost:3000/liuPengYuan",
+    pageUrl: "/liuPengYuan",
   },
   ...Array(7).fill({
     teacherName: "阿蕾奇诺姐姐在从壁炉之家搜集教师~",
     teacherMajor: "至冬国执行官",
     imageUrl: "/images/default.jpg",
-    pageUrl: "http://localhost:3000/default",
+    pageUrl: "/default",
   }),
 ];
 
@@ -33,24 +39,21 @@ export default function ChoosePage() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full py-2">
-      {/* <button
-        className="h-12 w-36 bg-blue-200"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        {count}
-      </button> */}
-      {teachers.map((teacher, index) => (
-        <div key={index} className="mb-4">
-          <Card
-            teacherName={teacher.teacherName}
-            teacherMajor={teacher.teacherMajor}
-            description=""
-            imageUrl={teacher.imageUrl}
-            pageUrl={teacher.pageUrl}
-          />
-        </div>
-      ))}
+    <div className="flex">
+      <Sidebar />
+      <div className="flex flex-col items-center justify-center min-h-screen w-full py-2 ml-73">
+        {teachers.map((teacher, index) => (
+          <div key={index} className="mb-4 w-full flex justify-center">
+            <Card
+              teacherName={teacher.teacherName}
+              teacherMajor={teacher.teacherMajor}
+              description={teacher.description}
+              imageUrl={teacher.imageUrl}
+              pageUrl={teacher.pageUrl}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
