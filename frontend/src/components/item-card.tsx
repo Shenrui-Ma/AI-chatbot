@@ -9,7 +9,7 @@ export default function ItemCard(props: {
   pageUrl: string;
 }) {
   return (
-    <div className="relative border-2 border-black shadow-md rounded-md w-[300px] h-[275px] p-4 overflow-visible min-w-[300px]">
+    <div className="relative border-2  bg-gray-200 border-black shadow-md rounded-md w-[300px] h-[275px] p-4 overflow-visible min-w-[300px]">
       <div className="flex justify-between items-center h-full">
         <Image
           src={props.imageUrl}
@@ -37,7 +37,7 @@ export default function ItemCard(props: {
         href={props.pageUrl}
         className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white text-center py-2 px-4 rounded hover:bg-blue-600 transition-colors"
       >
-        就是你啦！
+        I want YOU!
       </Link>
     </div>
   );

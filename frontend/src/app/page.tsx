@@ -2,6 +2,8 @@ import Card from "@/components/item-card";
 import Link from "next/link";
 import Image from "next/image";
 import Sidebar from "@/components/item-sidebar";
+import ItemAuthor from "@/components/item-author";
+import ButtonShare from "@/components/button-share";
 
 export default function HomePage() {
   return (
@@ -11,29 +13,11 @@ export default function HomePage() {
         <Sidebar />
       </div>
       {/* 分享按钮 */}
-      <div className=" absolute top-4 right-4">
-        <button className="bg-black text-white p-2 rounded-full hover:bg-green-700">
-          分享
-        </button>
-      </div>
+      <ButtonShare />
 
       {/* 主内容区 */}
       <div className="flex-grow">
-        <div className="flex justify-center mt-40">
-          <a href="https://github.com/Azrael-76" target="_blank">
-            <Image
-              src="/images/Silver_wolf.png"
-              alt="四倍体果蝇 Azrael-76"
-              className="border-4 border-purple-400 rounded-full"
-              width={100}
-              height={100}
-            />
-          </a>
-        </div>
-        <h1 className="flex justify-center font-serif text-2xl mt-3">
-          四倍体果蝇 Azrael-76
-        </h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <div className="text-2xl mt-8 border p-4 border-black rounded-md bg-blue-200 font-bold font-serif ">
             孩子，我是赛博罗志勇。
             <br />
@@ -57,6 +41,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      <ItemAuthor />
     </div>
   );
 }
