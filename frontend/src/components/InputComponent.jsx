@@ -16,7 +16,7 @@ function InputComponent() {
       },
       body: JSON.stringify({ message: input }),
     });
-    setInput(""); // 在发送数据后清空输入框
+    setInput("");
   };
 
   return (
