@@ -1,6 +1,6 @@
 # AI-chatbot
 
-![39af3e9e5f628ceb12fc77e8d5768cb.png](39af3e9e5f628ceb12fc77e8d5768cb.png)
+![alt text](ShowPage.png)
 
 ## 项目企划
 

@@ -12,7 +12,7 @@ export default function BubbleFurina() {
           alt="Furina"
         />
 
-        <div className="fixed text-3xl left-[26%] top-[25%] font-bold border-4 border-black rounded-full px-8 py-4 text-center bg-blue-300 italic">
+        <div className="fixed animate-pulse text-3xl left-[26%] top-[25%] font-bold border-4 border-black rounded-full px-8 py-4 text-center bg-blue-300 italic">
           Pick any professor<br></br>you want,dear ~<br></br>"Don't be her..."
         </div>
       </div>

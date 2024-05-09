@@ -49,7 +49,7 @@ const comments = [
     userName: "我有萌音身",
     comment:
       "“u1s1东哥的c++讲得很透彻，尤其是虚函数那一节，爱了爱了ଘ(੭ˊᵕˋ)੭* ੈ✩‧₊˚”",
-    avatarUrl: "/images/user2.png",
+    avatarUrl: "/images/Seal.gif",
   },
   {
     userName: "提瓦特杀猪王123",
