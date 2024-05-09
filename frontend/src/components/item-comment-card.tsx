@@ -7,7 +7,7 @@ export default function ItemCommentCard(props: {
   avatarUrl: string;
 }) {
   return (
-    <div className="relative left-[600px] bg-gray-200 border-2 border-black shadow-md rounded-md w-[700px] h-[275px] p-4 overflow-visible min-w-[300px]">
+    <div className="relative bg-gray-200 border-2 border-black shadow-md rounded-md w-[700px] h-[275px] p-4 overflow-visible min-w-[300px]">
       <div className="flex justify-between items-center h-full">
         <Image
           src={props.avatarUrl}

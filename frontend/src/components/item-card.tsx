@@ -25,12 +25,7 @@ export default function ItemCard(props: {
           <div className="flex items-center justify-center border-2 border-gray-500 rounded-full px-4 py-2 my-2 text-center">
             {props.teacherMajor}
           </div>
-          <div
-            className="text-md overflow-hidden"
-            style={{ maxHeight: "50px" }}
-          >
-            {props.description}
-          </div>
+          <div className="text-md overflow-hidden">{props.description}</div>
         </div>
       </div>
       <Link

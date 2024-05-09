@@ -6,11 +6,11 @@ import WordsAfterClick from "@/components/WordsAfterClick";
 const Chat = () => {
   return (
     // 测试：先随便展示张院长图片
-    <div>
+    <div className="flex flex-col items-center justify-center h-[100vh]">
       <img
         src="/images/罗志勇2.png"
         alt="帅气の罗志勇"
-        className="w-[200px] h-[200px]"
+        className="w-[300px] h-[400px]"
       />
       <InputComponent />
     </div>

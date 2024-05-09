@@ -1,8 +1,7 @@
 "use client";
 import Card from "@/components/item-card";
 import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
 import Sidebar from "@/components/item-sidebar";
 import ItemAuthor from "@/components/item-author";
 import ButtonShare from "@/components/button-share";
@@ -69,26 +68,35 @@ export default function ChoosePage() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex">
-      <ButtonShare />
+    <div className="flex justify-normal">
       <BubbleFurina />
-      <Sidebar />
-      <div className="fixed flex-col items-center justify-center min-h-screen w-full py-2 ml-73">
-        {teachers.map((teacher, index) => (
-          <div key={index} className="mb-4 w-full flex justify-center">
-            <Card
-              teacherName={teacher.teacherName}
-              teacherMajor={teacher.teacherMajor}
-              description={teacher.description}
-              imageUrl={teacher.imageUrl}
-              pageUrl={teacher.pageUrl}
-            />
-          </div>
-        ))}
+      <div className="flex flex-row relative ">
+        <div className="flex flex-col items-center py-2 relative">
+          {teachers.map((teacher, index) => (
+            <div
+              key={index}
+              className="mb-4 ml-40 flex justify-center"
+              style={{ marginLeft: "45vw" }}
+            >
+              <Card
+                teacherName={teacher.teacherName}
+                teacherMajor={teacher.teacherMajor}
+                description={teacher.description}
+                imageUrl={teacher.imageUrl}
+                pageUrl={teacher.pageUrl}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="fixed flex-col items-center justify-center min-h-screen w-full py-2 ml-73">
+
+      <div className="flex flex-col items-center justify-center min-h-screen w-full py-2 ">
         {comments.map((user, index) => (
-          <div key={index} className="mb-4 w-full flex justify-center">
+          <div
+            key={index}
+            className="mb-4 w-full flex justify-center relative"
+            style={{ marginRight: "5vw" }}
+          >
             <ItemCommentCard
               userName={user.userName}
               comment={user.comment}
@@ -97,7 +105,9 @@ export default function ChoosePage() {
           </div>
         ))}
       </div>
+      <ButtonShare />
       <ItemAuthor />
+      <Sidebar />
     </div>
   );
 }
