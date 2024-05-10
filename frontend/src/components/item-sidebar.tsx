@@ -3,10 +3,9 @@ import Image from "next/image";
 
 export default function ItemSidebar() {
   return (
-    <div className="fixed top-0 h-screen font-times">
+    <div className="flex h-screen font-times">
       {" "}
-      {/* 应用 Times New Roman 字体 */}
-      <div className="w-24 h-screen bg-gray-200 flex flex-col justify-around items-center py-4 border-4 border-gray-900">
+      <div className="w-24 h-screen bg-gray-200 flex flex-col justify-around items-center py-4 border-4 border-gray-900 fixed left-0">
         <div className="fixed top-3">
           <Image
             src="/images/logo.png"
@@ -44,7 +43,7 @@ export default function ItemSidebar() {
         </div>
         <div className="fixed bottom-3">
           <Link
-            href="/beta"
+            href="https://github.com/Azrael-76/AI-chatbot"
             className="flex bottom-0 items-center justify-center bg-purple-500 text-amber-300 text-lg py-2 px-4 rounded-full hover:bg-purple-700 font-bold border-4 border-green-900"
           >
             BETA

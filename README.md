@@ -13,6 +13,5 @@
 
 ## 项目技术栈
 
-- Python
-- Fastapi
-- React + Next.js
+- Python + FastAPI
+- React + Next.js + Tailwind CSS

@@ -39,7 +39,7 @@ export default function Test() {
       <Sidebar />
       <ItemAuthor />
       <ButtonShare />
-      <BubbleFurina />
+      {/* <BubbleFurina /> */}
       <div className="flex flex-col items-center justify-center min-h-screen w-full py-2 ml-73">
         {comments.map((user, index) => (
           <div key={index} className="mb-4 w-full flex justify-center">
