@@ -1,19 +1,16 @@
-"use client";
 import React, { useState } from "react";
 
-// 输入框组件
 function InputComponent() {
   const [input, setInput] = useState("");
 
-  // 处理输入框变化
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
 
-  // 处理提交
   const handleSubmit = async () => {
-    await fetch("http://localhost:8000/chat", {
-      method: "POST",
+    await fetch("http://localhost:8000/message", {
+      // 修改路由为 /message
+      method: "POST", // 确保使用 POST 方法
       headers: {
         "Content-Type": "application/json",
       },
@@ -34,7 +31,7 @@ function InputComponent() {
         onClick={handleSubmit}
         className="border-4 border-black rounded-lg p-4 bg-blue-500 text-white hover:bg-blue-700"
       >
-        发♂送
+        发送
       </button>
     </div>
   );

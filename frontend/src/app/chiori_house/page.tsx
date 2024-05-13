@@ -8,18 +8,17 @@ import ButtonShare from "@/components/button-share";
 import BubbleChiori from "@/components/bubble-chiori";
 import ItemCommentCard from "@/components/item-comment-card";
 import InputComponent from "@/components/InputComponent";
-import ImageDisplayComponent from "@/components/ImageDisplayComponent"; // 确保已正确导入
+import ImageDisplayComponent from "@/components/ImageDisplayComponent";
 
 export default function Test() {
-  // 更新图片路径，使用相对于public文件夹的路径
   const imagePath = "/images/cloth1.png";
 
   return (
     <div className="flex relative">
-      <div className="flex relative mt-4 justify-center items-center w-full h-[120vh]">
-        <InputComponent />
-        {/* 在这里添加 ImageDisplayComponent 并传递新的 imagePath */}
+      <div className="flex flex-col justify-center items-center w-full">
+        {/* 将 ImageDisplayComponent 放在 InputComponent 上面 */}
         <ImageDisplayComponent src={imagePath} />
+        <InputComponent />
       </div>
       <ItemAuthor />
       <ButtonShare />

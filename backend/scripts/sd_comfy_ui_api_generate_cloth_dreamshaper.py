@@ -4,7 +4,7 @@ import websocket
 from PIL import Image
 import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
-from backend.scripts.app import app
+from backend.scripts.main import app
 
 
 def generate_cloth_dreamshaper(

@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 import uvicorn
-from chatbot import get_response
 from PIL import Image
 import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
@@ -19,6 +18,20 @@ def read_root():
     return {"Hello": "World"}
 
 
+class Message(BaseModel):
+    message: str
+
+
+@app.post("/message")
+async def receive_message(message: Message):
+    # 这里可以添加处理消息的逻辑
+    print(
+        "##############################################Received message:",
+        message.message,
+    )
+    return {"status": "Message received successfully"}
+
+
 @app.post("/chat")
 async def chat(chat_request: ChatRequest):
     """
@@ -28,8 +41,10 @@ async def chat(chat_request: ChatRequest):
     user_input = chat_request.message
     user_id = chat_request.user_id
     try:
-        response = get_response(user_input, user_id)
+        # response = get_response(user_input, user_id)
+        response = "这是一个测试回复"
         return {"message": response}
+        pass
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
