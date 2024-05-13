@@ -34,6 +34,15 @@ async def chat(chat_request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/get-prompt")
+def get_prompt():
+    """
+    返回一个预设的提示信息。
+    """
+    # 这里可以根据实际情况返回不同的提示信息
+    return {"prompt": "请输入您的图像生成描述"}
+
+
 @app.post("/generate-image/")
 async def generate_image(
     prompt: str,
