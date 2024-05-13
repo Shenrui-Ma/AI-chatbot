@@ -9,9 +9,6 @@ export default function HomePage() {
   return (
     <div className="flex">
       {/* 侧边栏 */}
-      <div className="flexed">
-        <Sidebar />
-      </div>
       {/* 分享按钮 */}
       <ButtonShare />
 
@@ -41,6 +38,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      <Sidebar />
       <ItemAuthor />
     </div>
   );

@@ -30,7 +30,14 @@ const teachers = [
     imageUrl: "/images/刘鹏远.png",
     pageUrl: "/liuPengYuan",
   },
-  ...Array(7).fill({
+  {
+    teacherName: "千织",
+    teacherMajor: "服装设计",
+    description: "“千织屋，永远引领枫丹的时尚”",
+    imageUrl: "/images/chiori_icon.jpg",
+    pageUrl: "/chiori_house",
+  },
+  ...Array(6).fill({
     teacherName: "阿蕾奇诺姐姐在从壁炉之家搜集教师~",
     teacherMajor: "至冬国执行官",
     imageUrl: "/images/default.jpg",
@@ -57,7 +64,13 @@ const comments = [
       "“刘sir，您的课我上了一年，时间上没了，成绩上垮了，python它难不难，我能不知道嘛嘤嘤嘤”",
     avatarUrl: "/images/user3.png",
   },
-  ...Array(7).fill({
+  {
+    userName: "千织天下第一",
+    comment:
+      "“姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我姐姐踩我”",
+    avatarUrl: "/images/Silver_wolf.png",
+  },
+  ...Array(6).fill({
     userName: "Waiting...",
     comment: "nothing ...",
     avatarUrl: "/images/Silver_wolf.png",

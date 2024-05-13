@@ -4,9 +4,8 @@ import Image from "next/image";
 export default function ItemSidebar() {
   return (
     <div className="flex h-screen font-times">
-      {" "}
-      <div className="w-24 h-screen bg-gray-200 flex flex-col justify-around items-center py-4 border-4 border-gray-900 fixed left-0">
-        <div className="fixed top-3">
+      <div className="w-24 h-screen bg-gray-200 flex flex-col justify-between items-center py-4 border-4 border-gray-900 fixed left-0">
+        <div className="mt-4">
           <Image
             src="/images/logo.png"
             alt="logo"
@@ -15,7 +14,7 @@ export default function ItemSidebar() {
             className="rounded-full border-2 border-amber-400 w-16 h-16"
           />
         </div>
-        <div className="fixed space-y-3 top-20 mt-10">
+        <div className="flex flex-col space-y-5 grow mt-10">
           <div>
             <Link
               href="/login"
@@ -41,10 +40,10 @@ export default function ItemSidebar() {
             </Link>
           </div>
         </div>
-        <div className="fixed bottom-3">
+        <div className="mb-4">
           <Link
             href="https://github.com/Azrael-76/AI-chatbot"
-            className="flex bottom-0 items-center justify-center bg-purple-500 text-amber-300 text-lg py-2 px-4 rounded-full hover:bg-purple-700 font-bold border-4 border-green-900"
+            className="flex items-center justify-center bg-purple-500 text-amber-300 text-lg py-2 px-4 rounded-full hover:bg-purple-700 font-bold border-4 border-green-900"
           >
             BETA
           </Link>

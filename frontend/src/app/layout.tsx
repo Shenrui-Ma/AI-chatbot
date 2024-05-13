@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
+import Head from "next/head";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "北语信科赛博教师",
-  description: "Designed by Azrael-76",
-  icons: [{ rel: "icon", url: "/images/Silver_wolf.png" }],
-};
 
 export default function RootLayout({
   children,
@@ -17,6 +11,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>北语信科赛博教师</title>
+        <meta name="description" content="Designed by Azrael-76" />
+        <link rel="icon" href="/images/Silver_wolf64.png" />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
