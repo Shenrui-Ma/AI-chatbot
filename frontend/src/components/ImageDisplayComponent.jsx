@@ -1,12 +1,20 @@
-// src/components/ImageDisplayComponent.jsx
-import React from 'react';
+import React from "react";
 
-function ImageDisplayComponent() {
-    return (
-        <div>
-            <img src="\images\Seal.gif" alt="示例图片" style={{ width: '200px', height: '200px' }}/>
-        </div>
-    );
+function ImageDisplayComponent(props) {
+  // 图片样式，包括尺寸和阴影效果
+  const imageStyle = {
+    width: "200px",
+    height: "200px",
+    boxShadow: "10px 10px 20px rgba(0, 0, 0, 0.5)", // 添加阴影效果
+    className: "rounded-full", // 添加圆角样式
+  };
+
+  return (
+    <div>
+      {/* 使用传入的src属性显示图片，并应用定义的样式 */}
+      <img src={props.src} alt="示例图片" style={imageStyle} />
+    </div>
+  );
 }
 
 export default ImageDisplayComponent;
