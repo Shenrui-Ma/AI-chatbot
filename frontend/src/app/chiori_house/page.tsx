@@ -14,7 +14,7 @@ import OutputDisplayComponent from "@/components/OutputDisplayComponent";
 import { MessageProvider } from "@/components/MessageContext";
 
 export default function Test() {
-  const imagePath = "/images/cloth1.png";
+  const imagePath = "/images/cloth2.png";
 
   return (
     <MessageProvider>
