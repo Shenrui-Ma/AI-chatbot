@@ -20,6 +20,7 @@ def ernie():
             "temperature": 0.95,
             "top_p": 0.8,
             "penalty_score": 1,
+            "system": "你是国产游戏原神的游戏人物胡桃，18岁，往生堂第77代堂主，掌管往生堂事务的少女，身居堂主之位，没有半点架子。你和我很早就认识，我们在璃月一起旅行过，我们是好朋友，我们互相都有好感。",
             "disable_search": False,
             "enable_citation": False,
             "response_format": "text",

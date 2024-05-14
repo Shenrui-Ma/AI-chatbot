@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import BubbleChiori from "@/components/bubble-chiori";
 import ItemCommentCard from "@/components/item-comment-card";
 import InputComponent from "@/components/InputComponent";
 import ImageDisplayComponent from "@/components/ImageDisplayComponent";
+import OutputDisplayComponent from "@/components/OutputDisplayComponent";
 
 export default function Test() {
   const imagePath = "/images/cloth1.png";
@@ -16,8 +18,12 @@ export default function Test() {
   return (
     <div className="flex relative">
       <div className="flex flex-col justify-center items-center w-full">
-        {/* 将 ImageDisplayComponent 放在 InputComponent 上面 */}
-        <ImageDisplayComponent src={imagePath} />
+        <div className="relative w-full flex justify-center">
+          <ImageDisplayComponent src={imagePath} />
+          <div className="absolute right-40 top-20">
+            <OutputDisplayComponent />
+          </div>
+        </div>
         <InputComponent />
       </div>
       <ItemAuthor />

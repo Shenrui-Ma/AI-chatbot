@@ -8,15 +8,15 @@ function InputComponent() {
   };
 
   const handleSubmit = async () => {
-    await fetch("http://localhost:8000/message", {
-      // 修改路由为 /message
-      method: "POST", // 确保使用 POST 方法
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message: input }),
-    });
-    setInput("");
+    console.log("前端接收输入:", input),
+      await fetch("http://127.0.0.1:8000/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: input }),
+      });
+    console.log("前端尝试发送信息:", input), setInput("");
   };
 
   return (
@@ -30,8 +30,9 @@ function InputComponent() {
       <button
         onClick={handleSubmit}
         className="border-4 border-black rounded-lg p-4 bg-blue-500 text-white hover:bg-blue-700"
+        style={{ fontSize: "20px" }}
       >
-        发送
+        Send
       </button>
     </div>
   );

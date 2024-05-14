@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
 from PIL import Image
@@ -6,6 +7,15 @@ import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
 
 app = FastAPI()
+
+# 设置CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # 允许的源
+    allow_credentials=True,
+    allow_methods=["*"],  # 允许的方法
+    allow_headers=["*"],  # 允许的头部
+)
 
 
 class ChatRequest(BaseModel):
@@ -26,7 +36,7 @@ class Message(BaseModel):
 async def receive_message(message: Message):
     # 这里可以添加处理消息的逻辑
     print(
-        "##############################################Received message:",
+        "##############################################  Received message:",
         message.message,
     )
     return {"status": "Message received successfully"}

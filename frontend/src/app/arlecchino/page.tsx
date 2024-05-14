@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import InputComponent from "@/components/InputComponent";
 import Sidebar from "@/components/item-sidebar";

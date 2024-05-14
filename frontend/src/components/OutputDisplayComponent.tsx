@@ -10,7 +10,20 @@ function OutputDisplayComponent() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  return <div>{message ? message : "Loading..."}</div>;
+  return (
+    <div
+      className="border-8 border-amber-500 rounded-lg p-4 m-4 bg-amber-100"
+      style={{
+        width: "500px",
+        height: "800px",
+        overflow: "auto",
+        fontSize: "32px",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      {message ? message : "Loading..."}
+    </div>
+  );
 }
 
 export default OutputDisplayComponent;
