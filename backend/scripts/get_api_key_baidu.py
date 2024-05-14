@@ -7,7 +7,9 @@ def get_api_key_baidu():
     load_dotenv()  # 加载环境变量
     client_id = os.getenv("CLIENT_ID")
     client_secret = os.getenv("CLIENT_SECRET")
-    print(f"client_id: {client_id}, client_secret: {client_secret}")
+    # print(f"client_id: {client_id}, client_secret: {client_secret}")
+    print("client_id检索成功")
+    print("client_secret检索成功")
     return client_id, client_secret
 
 
@@ -27,7 +29,8 @@ def get_access_token():
         token_data = response.json()
         access_token = token_data.get("access_token", None)
         if access_token:
-            print("Access Token:", access_token)
+            # print("Access Token:", access_token)
+            print("access token检索成功")
             return access_token
         else:
             print("Error: Access token not found in the response.")

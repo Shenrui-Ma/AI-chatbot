@@ -5,6 +5,7 @@ import uvicorn
 from PIL import Image
 import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
+from scripts.ERNIE_35_8K import ernie
 
 app = FastAPI()
 
@@ -39,7 +40,12 @@ async def receive_message(message: Message):
         "##############################################  Received message:",
         message.message,
     )
-    return {"status": "Message received successfully"}
+    # 调用大模型的程序
+    try:
+        result = ernie(message.message)
+        return {"status": "Message received successfully", "result": result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/chat")
