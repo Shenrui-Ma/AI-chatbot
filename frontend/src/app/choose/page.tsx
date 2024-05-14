@@ -37,7 +37,14 @@ const teachers = [
     imageUrl: "/images/chiori_icon.jpg",
     pageUrl: "/chiori_house",
   },
-  ...Array(6).fill({
+  {
+    teacherName: "胡桃",
+    teacherMajor: "往生业务",
+    description: "“大丘丘病了二丘丘敲，三丘丘采药四丘丘摇~”",
+    imageUrl: "/images/hutao_icon.png",
+    pageUrl: "/hutao",
+  },
+  ...Array(5).fill({
     teacherName: "阿蕾奇诺姐姐在从壁炉之家搜集教师~",
     teacherMajor: "至冬国执行官",
     imageUrl: "/images/default.jpg",
