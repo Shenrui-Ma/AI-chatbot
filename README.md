@@ -1,6 +1,9 @@
 # AI-chatbot
 
-![alt text](ShowPage.png)
+![alt text](frontend/public/images/display1.png)
+![alt text](frontend/public/images/display2.png)
+![alt text](frontend/public/images/display3.png)
+![alt text](frontend/public/images/display4.png)
 
 ## 项目企划
 
