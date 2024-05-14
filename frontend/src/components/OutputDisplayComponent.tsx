@@ -29,7 +29,7 @@ function OutputDisplayComponent() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      {message ? message : "Loading..."}
+      {message ? message : "Waiting for your words..."}
     </div>
   );
 }

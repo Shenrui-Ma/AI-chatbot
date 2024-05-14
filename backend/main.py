@@ -31,6 +31,7 @@ def read_root():
 
 class Message(BaseModel):
     message: str
+    character: str
 
 
 @app.post("/message")
@@ -41,7 +42,7 @@ async def receive_message(message: Message):
         message.message,
     )
     try:
-        result = ernie(message.message)
+        result = ernie(message.message, message.character)
         return {"status": "Message received successfully", "result": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

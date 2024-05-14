@@ -28,7 +28,7 @@ export default function Test() {
               <OutputDisplayComponent />
             </div>
           </div>
-          <InputComponent />
+          <InputComponent character={"Chiori"} />
         </div>
         <ItemAuthor />
         <ButtonShare />

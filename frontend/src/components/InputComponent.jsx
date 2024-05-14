@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { MessageContext } from "./MessageContext";
 
-function InputComponent() {
+function InputComponent({ character }) {
   const [input, setInput] = useState("");
   const { setMessage } = useContext(MessageContext);
 
@@ -16,7 +16,7 @@ function InputComponent() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message: input }),
+      body: JSON.stringify({ message: input, character: character }),
     });
 
     if (response.ok) {
