@@ -40,7 +40,6 @@ async def receive_message(message: Message):
         "##############################################  Received message:",
         message.message,
     )
-    # 调用大模型的程序
     try:
         result = ernie(message.message)
         return {"status": "Message received successfully", "result": result}

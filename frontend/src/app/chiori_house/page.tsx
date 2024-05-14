@@ -11,25 +11,30 @@ import ItemCommentCard from "@/components/item-comment-card";
 import InputComponent from "@/components/InputComponent";
 import ImageDisplayComponent from "@/components/ImageDisplayComponent";
 import OutputDisplayComponent from "@/components/OutputDisplayComponent";
+import { MessageProvider } from "@/components/MessageContext";
 
 export default function Test() {
   const imagePath = "/images/cloth1.png";
 
   return (
-    <div className="flex relative">
-      <div className="flex flex-col justify-center items-center w-full">
-        <div className="relative w-full flex justify-center">
-          <ImageDisplayComponent src={imagePath} />
-          <div className="absolute right-40 top-20">
-            <OutputDisplayComponent />
+    <MessageProvider>
+      {" "}
+      {/* 使用MessageProvider包裹组件 */}
+      <div className="flex relative">
+        <div className="flex flex-col justify-center items-center w-full">
+          <div className="relative w-full flex justify-center">
+            <ImageDisplayComponent src={imagePath} />
+            <div className="absolute right-40 top-20">
+              <OutputDisplayComponent />
+            </div>
           </div>
+          <InputComponent />
         </div>
-        <InputComponent />
+        <ItemAuthor />
+        <ButtonShare />
+        <BubbleChiori />
+        <Sidebar />
       </div>
-      <ItemAuthor />
-      <ButtonShare />
-      <BubbleChiori />
-      <Sidebar />
-    </div>
+    </MessageProvider>
   );
 }

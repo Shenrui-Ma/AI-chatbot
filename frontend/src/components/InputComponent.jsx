@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { MessageContext } from "./MessageContext";
 
 function InputComponent() {
   const [input, setInput] = useState("");
+  const { setMessage } = useContext(MessageContext);
 
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
 
   const handleSubmit = async () => {
-    console.log("前端接收输入:", input),
-      await fetch("http://127.0.0.1:8000/message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: input }),
-      });
-    console.log("前端尝试发送信息:", input), setInput("");
+    console.log("前端接收输入:", input);
+    const response = await fetch("http://127.0.0.1:8000/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message: input }),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      setMessage(data.result); // 更新全局状态
+    }
+
+    console.log("前端尝试发送信息:", input);
+    setInput("");
   };
 
   return (
