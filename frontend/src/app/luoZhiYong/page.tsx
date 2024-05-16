@@ -53,9 +53,6 @@ export default function Test() {
       {" "}
       {/* 使用MessageProvider包裹组件 */}
       <div className="flex relative min-h-screen">
-        <ItemAuthor />
-        <ButtonShare />
-        <Sidebar />
         <div className="flex flex-col items-center justify-center w-full">
           <div className="relative flex justify-center items-center w-full">
             <div className="absolute left-0 flex flex-col items-center">
@@ -75,6 +72,9 @@ export default function Test() {
           </div>
           <InputComponent character={"LuoZhiyong"} />
         </div>
+        <Sidebar />
+        <ItemAuthor />
+        <ButtonShare />
       </div>
     </MessageProvider>
   );

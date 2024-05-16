@@ -44,7 +44,14 @@ const teachers = [
     imageUrl: "/images/hutao_icon.png",
     pageUrl: "/hutao",
   },
-  ...Array(5).fill({
+  {
+    teacherName: "阿蕾奇诺",
+    teacherMajor: "愚人众执行官",
+    description: "“滚”",
+    imageUrl: "/images/arlecchino_icon.png",
+    pageUrl: "/hutao",
+  },
+  ...Array(4).fill({
     teacherName: "阿蕾奇诺姐姐在从壁炉之家搜集教师~",
     teacherMajor: "至冬国执行官",
     imageUrl: "/images/default.jpg",
