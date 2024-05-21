@@ -125,3 +125,4 @@ def decorate(s):
 #     createRequest(q='我想要你给我画一件蓝色的长裙，镶嵌着蓝色的宝石')
 #     print("")
 #     createRequest(q='画一条黑色的女性晚礼服，上面有红色的玫瑰花，还有长长的裙摆，翘起的领子')
+
