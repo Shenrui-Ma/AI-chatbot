@@ -1,17 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import InputComponent from "@/components/InputComponent";
-import ImageDisplayComponent from "@/components/ImageDisplayComponent";
-import WordsAfterClick from "@/components/WordsAfterClick";
 import { MessageProvider } from "@/components/MessageContext";
 import Sidebar from "@/components/item-sidebar";
 import ItemAuthor from "@/components/item-author";
 import ButtonShare from "@/components/button-share";
-import Certificates from "@/components/item-certificates";
 import OutputDisplayComponent from "@/components/OutputDisplayComponent";
+import ChatHistory from "@/components/ChatHistory";
 import Image from "next/image";
 
-const Chat = () => {
+const Arlecchino = () => {
   return (
     <MessageProvider>
       <div className="flex flex-col items-center justify-center h-[100vh]">
@@ -20,14 +18,21 @@ const Chat = () => {
           How dare you ?
         </div>
 
-        <div className="flex flex-col items-center relative bottom-[20px]">
-          <Image
-            src="/images/arlecchino.png"
-            width={450}
-            height={800}
-            alt="你想的美"
-            className="border-8 border-red-800 object-cover"
-          />
+        <div className="flex flex-col items-center relative bottom-[20px] w-full">
+          <div className="flex justify-start items-start ">
+            <div className="flex flex-col relative right-[14vh]">
+              <ChatHistory />
+            </div>
+            <div className="flex relative justify-center flex-grow right-[14vh]">
+              <Image
+                src="/images/arlecchino.png"
+                width={450}
+                height={800}
+                alt="你想的美"
+                className="border-8 border-red-800 object-cover"
+              />
+            </div>
+          </div>
           <div className="mt-4">
             <InputComponent character={"Arlecchino"} />
           </div>
@@ -43,4 +48,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Arlecchino;

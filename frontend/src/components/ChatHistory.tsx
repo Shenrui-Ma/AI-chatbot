@@ -15,13 +15,13 @@ const ChatHistory: React.FC = () => {
   const { messages } = context as MessageContextType;
 
   return (
-    <div className="p-4 m-4 bg-gray-100 rounded-lg shadow-lg max-w-full w-auto h-auto">
+    <div className="flex flex-col p-4 m-4 bg-gray-100 rounded-lg shadow-lg max-w-full w-[300px] h-auto">
       {messages.length > 0 ? (
         messages.map((msg, index) => (
           <MessageItem key={index} message={msg.message} sender={msg.sender} />
         ))
       ) : (
-        <p>No messages yet.</p>
+        <p>Your chat history will be placed here.</p>
       )}
     </div>
   );
