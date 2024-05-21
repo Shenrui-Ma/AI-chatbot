@@ -21,7 +21,7 @@ const teachers = [
     teacherMajor: "C++编程",
     description: "“今天的教室稍显稀疏哇”",
     imageUrl: "/images/于东.jpg",
-    pageUrl: "/yuDong",
+    pageUrl: "/YuDong",
   },
   {
     teacherName: "刘鹏远教授",
@@ -49,7 +49,7 @@ const teachers = [
     teacherMajor: "愚人众执行官",
     description: "“滚”",
     imageUrl: "/images/arlecchino_icon.png",
-    pageUrl: "/hutao",
+    pageUrl: "/arlecchino",
   },
   ...Array(4).fill({
     teacherName: "阿蕾奇诺姐姐在从壁炉之家搜集教师~",
