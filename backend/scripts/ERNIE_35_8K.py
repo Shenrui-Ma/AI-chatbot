@@ -39,5 +39,6 @@ def ernie(prompt, character):
     else:
         print(f"Error: Failed to retrieve data with status code {response.status_code}")
 
+
 # 测试
-# ernie("早上好","Hutao")
+# ernie("早上好", "Hutao")
