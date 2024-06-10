@@ -6,6 +6,7 @@ from PIL import Image
 import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
 from scripts.ERNIE_35_8K import ernie
+from scripts.DoubaoLite4k import chat_with_Doubao
 
 app = FastAPI()
 
@@ -42,7 +43,10 @@ async def receive_message(message: Message):
         message.message,
     )
     try:
-        result = ernie(message.message, message.character)
+        # result = ernie(message.message, message.character) # 调用百度ERNIE模型
+        result = chat_with_Doubao(
+            message.message, message.character
+        )  # 调用DoubaoLite模型
         return {"status": "Message received successfully", "result": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -54,8 +58,8 @@ async def chat(chat_request: ChatRequest):
     接收用户的输入，返回聊天机器人的回复。
     """
     print("成功接收用户输入：", chat_request.message)
-    user_input = chat_request.message
-    user_id = chat_request.user_id
+    # user_input = chat_request.message
+    # user_id = chat_request.user_id
     try:
         # response = get_response(user_input, user_id)
         response = "这是一个测试回复"
