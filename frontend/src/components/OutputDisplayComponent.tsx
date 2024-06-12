@@ -50,7 +50,7 @@ function OutputDisplayComponent() {
         width: "500px",
         height: "950px",
         overflow: "auto",
-        fontSize: "24px",
+        fontSize: "18px",
         fontFamily: "Arial, sans-serif",
       }}
     >

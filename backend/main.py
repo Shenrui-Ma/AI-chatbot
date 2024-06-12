@@ -7,6 +7,7 @@ import io
 from scripts.sd_comfy_ui_api import SDComfyUIApi, SDComfyUIConfig
 from scripts.ERNIE_35_8K import ernie
 from scripts.DoubaoLite4k import chat_with_Doubao
+from scripts.generate_speech_fishspeech import generate_speech
 
 app = FastAPI()
 
@@ -47,7 +48,16 @@ async def receive_message(message: Message):
         result = chat_with_Doubao(
             message.message, message.character
         )  # 调用DoubaoLite模型
-        return {"status": "Message received successfully", "result": result}
+        print("AI response:", result)
+
+        # 生成语音
+        audio_file_path = generate_speech(result)
+
+        return {
+            "status": "Message received successfully",
+            "result": result,
+            "audio_file": audio_file_path,
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
