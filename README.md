@@ -21,11 +21,11 @@ Nevertheless, you can still clone it to your local machine as a toy project to t
 
 Virtual teachers at the School of Information Science, powered by ByteDance's Doubao large language model, utilize knowledge graphs to process teaching materials into a knowledge base. Currently, it has integrated a small portion of courseware from Data Structures and Introduction to Information Technology.
 
-Some "Genshin Impact" character chatbots are presented in the form of one-on-one chat rooms, including: Hu Tao's Wangsheng Funeral Parlor, Arlecchino's Hearth House, and Chiori's Chiori House. Hu Tao and Arlecchino offer different styles of conversation, while Chiori House can generate realistic or anime-style artwork based on prompts.
+Some "Genshin Impact" character chatbots are presented in the form of one-on-one chat rooms, including: Hu Tao's Wangsheng Funeral Parlor, Arlecchino's Hearth House, and Chiori's Chiori House. Hu Tao and Arlecchino offer different styles of conversation, while Chiori House can generate realistic or anime-style artwork based on prompts.（By default, it runs on port 8188.）
 
 1.信息科学学院虚拟教师，背后接入字节豆包大语言模型，利用知识图谱将教学课件处理成知识库。目前整合了小部分数据结构和信息技术导论的课件。
 
-2.部分《原神》角色聊天机器人以 1 对 1 聊天室形式呈现，包括：胡桃的往生堂，阿蕾奇诺的壁炉之家，千织的千织屋。胡桃和阿蕾奇诺可以体验基于不同性格的对话，千织屋除了对话，可以额外基于 COmfyUI 项目运行，根据提示词绘画写实/二次元风格的 AI 绘画。
+2.部分《原神》角色聊天机器人以 1 对 1 聊天室形式呈现，包括：胡桃的往生堂，阿蕾奇诺的壁炉之家，千织的千织屋。胡桃和阿蕾奇诺可以体验基于不同性格的对话，千织屋除了对话，可以额外基于 ComfyUI 项目运行（默认端口 8188），根据提示词绘画写实/二次元风格的 AI 绘画。
 (当然，他们都可以帮你写代码作业)
 
 ## Usage / 使用
