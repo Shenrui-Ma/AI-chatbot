@@ -91,3 +91,4 @@ The program now integrates my personal ByteDance Doubao-pro-128k model API, but 
 
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 - [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)
+- [Fish-Speech](https://github.com/fishaudio/fish-speech)
